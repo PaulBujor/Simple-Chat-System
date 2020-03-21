@@ -5,7 +5,7 @@ import java.io.IOException;
 import dk.via.App;
 import javafx.fxml.FXML;
 
-public class PrimaryController {
+public class LoginView {
 
     @FXML
     private void switchToSecondary() throws IOException {
