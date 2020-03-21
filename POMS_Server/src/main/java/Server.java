@@ -27,8 +27,10 @@ public class Server {
         System.out.println("Starting server...");
 
         ServerSocket serverSocket = new ServerSocket(port);
+
+        System.out.println("Server started...");
         while(true) {
-            System.out.println("Waiting for client...");
+//            System.out.println("Waiting for client...");
             Socket socket = serverSocket.accept();
 
             ClientHandler client = new ClientHandler(socket);
