@@ -12,6 +12,7 @@ public class ChatModel implements Model {
     private PropertyChangeSupport property;
     private ArrayList<Message> messages;
     private ChatClient chatClient;
+    private Thread chatThread;
     private String host;
     private int port;
     private String username;
@@ -34,17 +35,27 @@ public class ChatModel implements Model {
 
     public void connect() throws IOException {
         chatClient = new ChatClient(host, port, username, this);
-        if(chatClient.connect()) {
-            (new Thread(chatClient)).start();
+        if (chatClient.connect()) {
+            chatThread = new Thread(chatClient);
+            chatThread.setDaemon(true);
+            chatThread.start();
 //            property.firePropertyChange("connected", 0, 1);
         }
     }
 
+    public void disconnect() {
+        chatThread.interrupt();
+    }
+
     @Override
     public void receiveMessage(Message message) {
-        messages.add(message);
-        System.out.println(message);
-//        property.firePropertyChange("message", 0, message);
+        if (message.isIPRequest()) {
+            System.out.println(message.getMessage());
+        } else {
+            messages.add(message);
+            System.out.println(message);
+//            property.firePropertyChange("message", 0, message);
+        }
     }
 
     public void sendMessage(Message message) {

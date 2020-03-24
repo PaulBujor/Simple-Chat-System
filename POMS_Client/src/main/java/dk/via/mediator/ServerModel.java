@@ -8,5 +8,5 @@ public interface ServerModel {
     public boolean connect() throws IOException;
     public void disconnect();
     public void sendMessage(Message message);
-    public String requestIP() throws IOException;
+    public void requestIP() throws IOException;
 }

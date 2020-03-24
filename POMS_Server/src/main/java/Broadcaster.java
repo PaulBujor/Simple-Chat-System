@@ -21,7 +21,6 @@ public class Broadcaster {
 
     //calls ClientHandler.send method for each connected client, used to transmit message to all clients
     public void send(Message message) {
-            System.out.println(clients.size());
             synchronized (this) {
             for (ClientHandler client : clients) {
                 client.send(message);

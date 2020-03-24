@@ -54,12 +54,16 @@ public class App extends Application {
         model.setUsername(user);
         model.connect();
 
-        while(true) {
-            Message send = new Message(user, input.nextLine(), false);
+        while (true) {
+            String msg = input.nextLine();
+            Message send = null;
+            if (msg.equals("/ip"))
+                send = new Message(user, msg, true);
+            else
+                send = new Message(user, msg, false);
             model.sendMessage(send);
         }
 //        input.close();
-
 
 
 //        launch(); //todo don't delete this tho

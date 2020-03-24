@@ -10,14 +10,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class ChatClient implements ServerModel, Runnable{
+public class ChatClient implements ServerModel, Runnable {
     private String user;
     private String host;
     private int port;
     private Socket socket;
     private BufferedReader in;
     private PrintWriter out;
-    private boolean running = false;
     private Model model;
     private Gson gson = new Gson();
 
@@ -34,26 +33,27 @@ public class ChatClient implements ServerModel, Runnable{
 
     public void run() {
         //todo if disconnected thread still wwaits for message from server
-        //todo make getting ip pretty
-        //todo just send @received to model and let model do distinction between ip and message
-        while(running) {
+        while (true) {
             Message received = null;
             try {
                 received = gson.fromJson(in.readLine(), Message.class);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if (!received.isIPRequest())
+            try {
                 model.receiveMessage(received); //sends received message to model
+            } catch (NullPointerException e) {
+                System.out.println("You disconnected");
+                break;
+            }
         }
     }
 
     @Override
     public boolean connect() throws IOException {
         out.println("/connect");
-        if(in.readLine().equals("/connected")) {
+        if (in.readLine().equals("/connected")) {
             System.out.println("connected");
-            running = true;
             return true;
         }
         return false;
@@ -61,8 +61,6 @@ public class ChatClient implements ServerModel, Runnable{
 
     @Override
     public void disconnect() {
-        running = false;
-        //todo stop thread when this happens
         out.println(gson.toJson(new Message(user, "/disconnect")));
     }
 
@@ -73,10 +71,9 @@ public class ChatClient implements ServerModel, Runnable{
     }
 
     @Override
-    public String requestIP() throws IOException {
+    public void requestIP() throws IOException {
         //requests ip from server
         //todo move return into thread + MVVM fire event
         out.println(gson.toJson(new Message(user, "", true)));
-        return in.readLine();
     }
 }

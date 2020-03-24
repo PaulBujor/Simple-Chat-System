@@ -38,7 +38,7 @@ public class ClientHandler implements Runnable {
                     //reads message from server
                     Message message = gson.fromJson(in.readLine(), Message.class);
                     if(message.isIPRequest())
-                        out.println(socket.getInetAddress().toString()); //returns IP address of client
+                        out.println(gson.toJson(new Message("server", socket.getInetAddress().toString(), true))); //returns IP address of client
                     else if(message.getMessage().equals("/disconnect")) {
                         System.out.println("Disconnected");
                         userConnected = false; //condition to exit loop
