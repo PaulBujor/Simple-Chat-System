@@ -32,10 +32,8 @@ public class ClientHandler implements Runnable {
             else {
                 out.println("/connected");
                 boolean userConnected = true;
-                System.out.println("while start");
                 do {
                     Message message = gson.fromJson(in.readLine(), Message.class);
-                    System.out.println("message received");
                     if(message.isIPRequest())
                         out.println(socket.getInetAddress().toString());
                     else if(message.getMessage().equals("/disconnect")) {
@@ -47,7 +45,6 @@ public class ClientHandler implements Runnable {
                         broadcaster.send(message);
                     }
                 } while (userConnected);
-                System.out.println("while end");
             }
             socket.close();
         } catch (IOException e) {

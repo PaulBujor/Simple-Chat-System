@@ -15,9 +15,11 @@ public class Broadcaster {
     }
 
     public void send(Message message) {
-        System.out.println(clients.size());
-        for(ClientHandler client : clients) {
-            client.send(message);
+            System.out.println(clients.size());
+            synchronized (this) {
+            for (ClientHandler client : clients) {
+                client.send(message);
+            }
         }
     }
 }
