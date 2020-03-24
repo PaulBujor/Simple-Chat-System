@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class ClientHandler implements Runnable {
     private BufferedReader in;
@@ -17,9 +18,10 @@ public class ClientHandler implements Runnable {
     public ClientHandler(Socket socket, Broadcaster broadcaster) throws IOException {
         this.socket = socket;
         this.broadcaster = broadcaster;
+        gson = new Gson();
+        //creates input and output streams(connections) to the client
         in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
         out = new PrintWriter(this.socket.getOutputStream(), true);
-        gson = new Gson();
     }
 
     @Override
@@ -33,26 +35,34 @@ public class ClientHandler implements Runnable {
                 out.println("/connected");
                 boolean userConnected = true;
                 do {
+                    //reads message from server
                     Message message = gson.fromJson(in.readLine(), Message.class);
                     if(message.isIPRequest())
-                        out.println(socket.getInetAddress().toString());
+                        out.println(socket.getInetAddress().toString()); //returns IP address of client
                     else if(message.getMessage().equals("/disconnect")) {
                         System.out.println("Disconnected");
-                        userConnected = false;
+                        userConnected = false; //condition to exit loop
+                        broadcaster.removeClient(this); //removes current client from Broadcaster
                     }
                     else {
+                        //sends message
                         System.out.println(message);
                         broadcaster.send(message);
                     }
                 } while (userConnected);
             }
             socket.close();
+        } catch (SocketException e) {
+            //if user force-closes program
+            System.out.println("Client disconnected");
+            broadcaster.removeClient(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void send(Message message) {
+        //sends message to THIS client
         out.println(gson.toJson(message));
     }
 }

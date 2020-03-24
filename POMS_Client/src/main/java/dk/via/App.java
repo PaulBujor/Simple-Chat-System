@@ -38,7 +38,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-
+        //todo temporary, delete everything after GUI made
         Scanner input = new Scanner(System.in);
         System.out.print("Server IP: ");
         String host = input.nextLine();
@@ -58,8 +58,10 @@ public class App extends Application {
             Message send = new Message(user, input.nextLine(), false);
             model.sendMessage(send);
         }
-
 //        input.close();
-//        launch();
+
+
+
+//        launch(); //todo don't delete this tho
     }
 }

@@ -4,6 +4,7 @@ import utility.Message;
 import java.util.ArrayList;
 
 public class Broadcaster {
+    //holds all connected clients
     private ArrayList<ClientHandler> clients;
 
     public Broadcaster() {
@@ -14,6 +15,11 @@ public class Broadcaster {
         clients.add(client);
     }
 
+    public void removeClient(ClientHandler client) {
+        clients.remove(client);
+    }
+
+    //calls ClientHandler.send method for each connected client, used to transmit message to all clients
     public void send(Message message) {
             System.out.println(clients.size());
             synchronized (this) {

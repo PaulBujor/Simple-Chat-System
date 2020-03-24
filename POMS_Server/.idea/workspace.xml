@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="997e425f-c055-43a3-82fe-53d7d80e5da7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/mediator/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/mediator/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Broadcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broadcaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ClientHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

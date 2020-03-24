@@ -15,7 +15,7 @@ public class ServerThread implements Runnable {
         broadcaster = new Broadcaster();
     }
 
-    //gets internet IP from Amazon Web Services
+    //gets internet IP of server using Amazon Web Services
     private String getIP() throws IOException{
         URL whatismyip = new URL("http://checkip.amazonaws.com");
         BufferedReader in = new BufferedReader(new InputStreamReader(
@@ -37,6 +37,7 @@ public class ServerThread implements Runnable {
 
             System.out.println("Server started...");
             while (true) {
+                //Waits for new client and starts new ClientHandler thread for that client
                 Socket socket = serverSocket.accept();
 
                 ClientHandler client = new ClientHandler(socket, broadcaster);
