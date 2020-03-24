@@ -2,6 +2,8 @@ package dk.via;
 
 import dk.via.mediator.ChatClient;
 import dk.via.mediator.ServerModel;
+import dk.via.model.ChatModel;
+import dk.via.model.Model;
 import dk.via.utility.Message;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -46,18 +48,18 @@ public class App extends Application {
         System.out.print("Username: ");
         String user = input.nextLine();
 
-        ServerModel server = new ChatClient(host, port, user);
-        if(server.connect()) {
-            System.out.println(server.requestIP());
-            for (int i = 0; i < 5; i++) {
-                server.sendMessage(new Message(user, input.nextLine()));
-            }
-            server.disconnect();
+        Model model = new ChatModel();
+        model.setHost(host);
+        model.setPort(port);
+        model.setUsername(user);
+        model.connect();
+
+        while(true) {
+            Message send = new Message(user, input.nextLine(), false);
+            model.sendMessage(send);
         }
 
-        input.close();
-        launch();
-
+//        input.close();
+//        launch();
     }
-
 }

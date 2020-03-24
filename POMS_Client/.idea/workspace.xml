@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb96fb70-f773-43cc-af82-0404dbdc466f" name="Default Changelist" comment="" />
+    <list default="true" id="cb96fb70-f773-43cc-af82-0404dbdc466f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../POMS_Server/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/Broadcaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/model/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/model/ChatModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/ServerThread.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,6 +39,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZRxWCMJXPyAQnwWtJde5SyA4qu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -79,5 +97,18 @@
       <updated>1584815736245</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

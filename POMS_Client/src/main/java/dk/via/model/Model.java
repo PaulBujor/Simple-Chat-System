@@ -1,4 +1,15 @@
 package dk.via.model;
 
-public interface Model {
+import dk.via.utility.Message;
+import dk.via.utility.PropertyChangeSubject;
+
+import java.io.IOException;
+
+public interface Model extends PropertyChangeSubject {
+    public void receiveMessage(Message message);
+    public void setHost(String host);
+    public void setPort(int port);
+    public void setUsername(String username);
+    public void connect() throws IOException;
+    public void sendMessage(Message message);
 }
