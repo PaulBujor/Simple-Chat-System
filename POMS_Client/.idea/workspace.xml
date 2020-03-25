@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb96fb70-f773-43cc-af82-0404dbdc466f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ChatClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/model/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/model/ChatModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/utility/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/utility/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/Broadcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/Broadcaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/utility/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/utility/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +114,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/POMS_Client$App.ic" NAME="App Coverage Results" MODIFIED="1585050678647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/POMS_Client$App.ic" NAME="App Coverage Results" MODIFIED="1585145164983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dk.via.view.*</FILTER>
     </SUITE>
   </component>

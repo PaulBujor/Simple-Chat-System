@@ -60,7 +60,7 @@ public class App extends Application {
             if (msg.equals("/ip"))
                 send = new Message(user, msg, true);
             else
-                send = new Message(user, msg, false);
+                send = new Message(user, msg);
             model.sendMessage(send);
         }
 //        input.close();

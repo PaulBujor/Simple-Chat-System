@@ -32,7 +32,7 @@ public class ChatClient implements ServerModel, Runnable {
     }
 
     public void run() {
-        //todo if disconnected thread still wwaits for message from server
+        //todo if disconnected thread still waits for message from server
         while (true) {
             Message received = null;
             try {
@@ -40,6 +40,7 @@ public class ChatClient implements ServerModel, Runnable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            System.out.println("RECEIVED");
             try {
                 model.receiveMessage(received); //sends received message to model
             } catch (NullPointerException e) {

@@ -46,6 +46,7 @@ public class ClientHandler implements Runnable {
                     }
                     else {
                         //sends message
+                        System.out.println("message sent");
                         System.out.println(message);
                         broadcaster.send(message);
                     }
