@@ -23,19 +23,33 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <Label layoutX="14.0" layoutY="16.0" text="Chatters connected: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="41.0" text="IP: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <TableView layoutX="41.0" layoutY="106.0" prefHeight="542.0" prefWidth="1118.0" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="106.0">
+      <TableView layoutX="41.0" layoutY="106.0" prefHeight="508.0" prefWidth="1118.0" stylesheets="@css/style.css" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="106.0">
         <columns>
           <TableColumn prefWidth="559.0" text="C1" />
           <TableColumn prefWidth="558.0" text="C2" />
         </columns>
       </TableView>
-      <TextField layoutX="41.0" layoutY="677.0" prefHeight="36.0" prefWidth="1017.0" promptText="Write a message" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="142.0" />
-      <Button layoutX="1075.0" layoutY="677.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="84.0" style="-fx-background-color: #3598db;" text="SEND" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="41.0">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
+      <AnchorPane layoutX="41.0" layoutY="640.0" prefHeight="73.0" prefWidth="1118.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+         <children>
+            <TextField layoutX="10.0" layoutY="13.0" prefHeight="47.0" prefWidth="1007.0" promptText="Write a message" stylesheets="@css/style.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="101.0" />
+            <Button layoutX="1034.0" layoutY="13.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="73.0" stylesheets="@css/style.css" text="SEND" textFill="WHITE" AnchorPane.rightAnchor="11.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
