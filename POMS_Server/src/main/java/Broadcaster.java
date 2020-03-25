@@ -21,6 +21,7 @@ public class Broadcaster {
         updateClients();
     }
 
+    //sends number of connected clients when a clinet connects/disconnects
     private void updateClients() {
         send(new Message("Server", Integer.toString(clients.size()), false, true));
     }
