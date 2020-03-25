@@ -55,10 +55,10 @@ public class ChatModel implements Model {
         if (message.isIPRequest()) {
             System.out.println(message.getMessage());
             //todo send to viewmodel
-//        } else if(message.isConnectedUpdate()) {
-//            connectedUsers = Integer.parseInt(message.getMessage());
-//            System.out.println(connectedUsers);
-//            //todo send to viewmodel
+        } else if(message.isConnectedUpdate()) {
+            connectedUsers = Integer.parseInt(message.getMessage());
+            System.out.println(connectedUsers);
+            //todo send to viewmodel
         } else {
             messages.add(message);
             System.out.println(message);
