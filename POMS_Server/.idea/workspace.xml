@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997e425f-c055-43a3-82fe-53d7d80e5da7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/ChatModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/utility/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/utility/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Broadcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broadcaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utility/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

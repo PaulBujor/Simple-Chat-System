@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class ChatClient implements ServerModel, Runnable {
     private String user;
@@ -32,11 +33,13 @@ public class ChatClient implements ServerModel, Runnable {
     }
 
     public void run() {
-        //todo if disconnected thread still wwaits for message from server
+        //todo if disconnected thread still waits for message from server
         while (true) {
             Message received = null;
             try {
                 received = gson.fromJson(in.readLine(), Message.class);
+            }catch (SocketException e) {
+                System.out.println("Unexpected error has occured");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -52,7 +55,8 @@ public class ChatClient implements ServerModel, Runnable {
     @Override
     public boolean connect() throws IOException {
         out.println("/connect");
-        if (in.readLine().equals("/connected")) {
+        String reply = in.readLine();
+        if (reply.equals("/connected")) {
             System.out.println("connected");
             return true;
         }
