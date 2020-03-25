@@ -13,10 +13,16 @@ public class Broadcaster {
 
     public void addClient(ClientHandler client) {
         clients.add(client);
+        updateClients();
     }
 
     public void removeClient(ClientHandler client) {
         clients.remove(client);
+        updateClients();
+    }
+
+    private void updateClients() {
+        send(new Message("Server", Integer.toString(clients.size()), false, true));
     }
 
     //calls ClientHandler.send method for each connected client, used to transmit message to all clients
