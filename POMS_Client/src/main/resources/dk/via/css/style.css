@@ -1,0 +1,29 @@
+.table-view {
+  -fx-table-cell-border-color: transparent;
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+  -fx-background-color: #f4f4f4;
+
+}
+
+.column-header-background {
+    visibility: hidden;
+    -fx-padding: -1em;
+    }
+
+.button {
+    -fx-background-color: #3598db;
+        -fx-background-radius: 10 10 10 10;
+}
+
+.button:pressed {
+    -fx-background-color: #328ecd;
+}
+
+.text-field {
+
+    -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+    -fx-text-box-border: transparent;
+
+}
+
