@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb96fb70-f773-43cc-af82-0404dbdc466f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ServerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/mediator/ServerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/model/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/model/ChatModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/Broadcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/Broadcaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Server/target/classes/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/target/classes/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dk/via/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dk/via/primary.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
