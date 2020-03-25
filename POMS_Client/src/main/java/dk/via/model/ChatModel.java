@@ -2,6 +2,7 @@ package dk.via.model;
 
 import dk.via.mediator.ChatClient;
 import dk.via.utility.Message;
+import javafx.beans.property.IntegerProperty;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -16,6 +17,7 @@ public class ChatModel implements Model {
     private String host;
     private int port;
     private String username;
+    private int connectedUsers = 0;
 
     public ChatModel() throws IOException {
         messages = new ArrayList<Message>();
@@ -51,6 +53,10 @@ public class ChatModel implements Model {
     public void receiveMessage(Message message) {
         if (message.isIPRequest()) {
             System.out.println(message.getMessage());
+            //todo send to viewmodel
+        } else if(message.isConnectedUpdate()) {
+            connectedUsers = Integer.parseInt(message.getMessage());
+            //todo send to viewmodel
         } else {
             messages.add(message);
             System.out.println(message);

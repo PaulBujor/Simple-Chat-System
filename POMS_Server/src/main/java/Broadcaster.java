@@ -13,10 +13,17 @@ public class Broadcaster {
 
     public void addClient(ClientHandler client) {
         clients.add(client);
+        updateClients();
     }
 
     public void removeClient(ClientHandler client) {
         clients.remove(client);
+        updateClients();
+    }
+
+    //sends number of connected clients when a clinet connects/disconnects
+    private void updateClients() {
+        send(new Message("Server", Integer.toString(clients.size()), false, true));
     }
 
     //calls ClientHandler.send method for each connected client, used to transmit message to all clients
