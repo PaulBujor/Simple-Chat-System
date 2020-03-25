@@ -27,3 +27,20 @@
 
 }
 
+.linear-grad-to-top-right{
+    -fx-background-color: linear-gradient(to top right, #044a83, #3598db);
+}
+
+.text-field-lower-line {
+    -fx-border-insets: 0;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-background-color: transparent;
+}
+
+.text-field-lower-line:selected {
+    -fx-border-insets: 0;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent transparent #3598db transparent;
+}
+
