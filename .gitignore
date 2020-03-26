@@ -1,6 +1,8 @@
 POMS_Server/target/*
+POMS_Client/target/*
 .idea/workspace.xml
 POMS_Client/.idea/workspace.xml
-POMS_Client/target/classes/dk/via/model/ChatModel.class
+POMS_Server/.idea/workspace.xml
+POMS_Client/.idea/workspace.xml
 POMS_Server/.idea/workspace.xml
 POMS_Client/.idea/workspace.xml

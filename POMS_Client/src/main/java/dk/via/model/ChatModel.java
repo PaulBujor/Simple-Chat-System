@@ -2,6 +2,7 @@ package dk.via.model;
 
 import dk.via.mediator.ChatClient;
 import dk.via.utility.Message;
+import javafx.beans.property.IntegerProperty;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -12,9 +13,11 @@ public class ChatModel implements Model {
     private PropertyChangeSupport property;
     private ArrayList<Message> messages;
     private ChatClient chatClient;
+    private Thread chatThread;
     private String host;
     private int port;
     private String username;
+    private int connectedUsers = 0;
 
     public ChatModel() throws IOException {
         messages = new ArrayList<Message>();
@@ -34,17 +37,33 @@ public class ChatModel implements Model {
 
     public void connect() throws IOException {
         chatClient = new ChatClient(host, port, username, this);
-        if(chatClient.connect()) {
-            (new Thread(chatClient)).start();
+        if (chatClient.connect()) {
+            chatThread = new Thread(chatClient);
+            chatThread.setDaemon(true);
+            chatThread.start();
 //            property.firePropertyChange("connected", 0, 1);
         }
     }
 
+    public void disconnect() {
+        chatClient.disconnect();
+        chatThread.interrupt();
+    }
+
     @Override
     public void receiveMessage(Message message) {
-        messages.add(message);
-        System.out.println(message);
-//        property.firePropertyChange("message", 0, message);
+        if (message.isIPRequest()) {
+            System.out.println(message.getMessage());
+            //todo send to viewmodel
+        } else if(message.isConnectedUpdate()) {
+            connectedUsers = Integer.parseInt(message.getMessage());
+            System.out.println(connectedUsers);
+            //todo send to viewmodel
+        } else {
+            messages.add(message);
+            System.out.println(message);
+//            property.firePropertyChange("message", 0, message);
+        }
     }
 
     public void sendMessage(Message message) {

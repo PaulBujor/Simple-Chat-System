@@ -9,15 +9,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
 
-public class ChatClient implements ServerModel, Runnable{
+public class ChatClient implements ServerModel, Runnable {
     private String user;
     private String host;
     private int port;
     private Socket socket;
     private BufferedReader in;
     private PrintWriter out;
-    private boolean running = false;
     private Model model;
     private Gson gson = new Gson();
 
@@ -27,29 +27,37 @@ public class ChatClient implements ServerModel, Runnable{
         this.user = user;
         this.model = model;
         socket = new Socket(host, port);
+        //creates input and output streams(connections) to the server
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
     }
 
     public void run() {
-        while(running) {
+        //todo if disconnected thread still waits for message from server
+        while (true) {
             Message received = null;
             try {
                 received = gson.fromJson(in.readLine(), Message.class);
+            }catch (SocketException e) {
+                System.out.println("Unexpected error has occured");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if (!received.isIPRequest())
-                model.receiveMessage(received);
+            try {
+                model.receiveMessage(received); //sends received message to model
+            } catch (NullPointerException e) {
+                System.out.println("You disconnected");
+                break;
+            }
         }
     }
 
     @Override
     public boolean connect() throws IOException {
         out.println("/connect");
-        if(in.readLine().equals("/connected")) {
+        String reply = in.readLine();
+        if (reply.equals("/connected")) {
             System.out.println("connected");
-            running = true;
             return true;
         }
         return false;
@@ -57,18 +65,19 @@ public class ChatClient implements ServerModel, Runnable{
 
     @Override
     public void disconnect() {
-        running = false;
         out.println(gson.toJson(new Message(user, "/disconnect")));
     }
 
     @Override
     public void sendMessage(Message message) {
+        //sends message to server
         out.println(gson.toJson(message));
     }
 
     @Override
-    public String requestIP() throws IOException {
+    public void requestIP() throws IOException {
+        //requests ip from server
+        //todo move return into thread + MVVM fire event
         out.println(gson.toJson(new Message(user, "", true)));
-        return in.readLine();
     }
 }
