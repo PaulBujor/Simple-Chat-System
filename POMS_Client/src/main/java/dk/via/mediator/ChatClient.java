@@ -73,11 +73,12 @@ public class ChatClient implements ServerModel, Runnable {
         //sends message to server
         out.println(gson.toJson(message));
     }
-
+    //TODO had to comment this out
+/*
     @Override
     public void requestIP() throws IOException {
         //requests ip from server
         //todo move return into thread + MVVM fire event
         out.println(gson.toJson(new Message(user, "", true)));
-    }
+    }*/
 }

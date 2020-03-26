@@ -35,13 +35,13 @@ public class ChatModel implements Model {
         this.username = username;
     }
 
-    public void connect() throws IOException {
+    public void connect(String host,int port) throws IOException {
         chatClient = new ChatClient(host, port, username, this);
         if (chatClient.connect()) {
             chatThread = new Thread(chatClient);
             chatThread.setDaemon(true);
             chatThread.start();
-//            property.firePropertyChange("connected", 0, 1);
+         property.firePropertyChange("connected", 0, 1);
         }
     }
 

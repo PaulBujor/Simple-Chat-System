@@ -5,6 +5,8 @@ import dk.via.mediator.ServerModel;
 import dk.via.model.ChatModel;
 import dk.via.model.Model;
 import dk.via.utility.Message;
+import dk.via.view.ViewHandler;
+import dk.via.viewmodel.ViewModelFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,22 +25,23 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"));
-        stage.setScene(scene);
-        stage.show();
+      ChatModel model = new ChatModel();
+        ViewModelFactory viewModelFactory = new ViewModelFactory(model);
+        ViewHandler view = new ViewHandler(viewModelFactory);
+        view.start(stage);
     }
 
-    public static void setRoot(String fxml) throws IOException {
+/*    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
-    }
+    }*/
 
     public static void main(String[] args) throws IOException {
-        //todo temporary, delete everything after GUI made
+     /*   //todo temporary, delete everything after GUI made
         Scanner input = new Scanner(System.in);
         System.out.print("Server IP: ");
         String host = input.nextLine();
@@ -65,7 +68,7 @@ public class App extends Application {
         }
 //        input.close();
 
-
-//        launch(); //todo don't delete this tho
+*/
+       launch(); //todo don't delete this tho
     }
 }

@@ -10,6 +10,6 @@ public interface Model extends PropertyChangeSubject {
     public void setHost(String host);
     public void setPort(int port);
     public void setUsername(String username);
-    public void connect() throws IOException;
+    public void connect(String host,int port) throws IOException;
     public void sendMessage(Message message);
 }
