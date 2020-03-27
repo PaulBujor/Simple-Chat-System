@@ -18,11 +18,12 @@ public class ChatController {
     private Label userNameLabel;
 
     @FXML
-    private TextField clientMessage;
+    private Label onlineUsers;
 
     @FXML
-    private Button sendButton;
+    private TextField clientMessage;
 
+    //todo table
 
     private Region root;
     private ViewHandler viewHandler;
