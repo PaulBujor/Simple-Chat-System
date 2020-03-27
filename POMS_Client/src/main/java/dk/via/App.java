@@ -64,6 +64,6 @@ public class App extends Application {
             model.sendMessage(send);
         }*/
 
-//       launch(); //todo don't delete this tho
+       launch(); //todo don't delete this tho
     }
 }
