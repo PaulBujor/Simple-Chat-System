@@ -10,8 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 
-public class ChatController
-{
+public class ChatController {
     @FXML
     private Label chatIPLabel;
 
@@ -25,16 +24,13 @@ public class ChatController
     private Button sendButton;
 
 
-
-
-
     private Region root;
     private ViewHandler viewHandler;
     private ChatViewModel chatViewModel;
 
 
-    public ChatController(){}
-
+    public ChatController() {
+    }
 
     public void init(ViewHandler viewHandler, ChatViewModel chatViewModel, Region root) {
         this.viewHandler = viewHandler;
@@ -52,7 +48,7 @@ public class ChatController
     }
 
     @FXML
-    private void sendButtonPressed(){
+    private void sendButtonPressed() {
 
     }
 }

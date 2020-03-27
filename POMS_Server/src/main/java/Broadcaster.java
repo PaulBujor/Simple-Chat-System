@@ -43,4 +43,8 @@ public class Broadcaster {
             }
         }
     }
+
+    public int getNumberOfClients() {
+        return clients.size();
+    }
 }

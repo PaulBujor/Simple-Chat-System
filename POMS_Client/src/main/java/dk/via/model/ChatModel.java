@@ -35,14 +35,22 @@ public class ChatModel implements Model {
         this.username = username;
     }
 
-    public void connect(String host,int port) throws IOException {
+    public void setConnectedUsers(int connectedUsers) {
+        this.connectedUsers = connectedUsers;
+    }
+
+    public boolean connect(String host, int port, String username) throws IOException {
+        setHost(host);
+        setPort(port);
+        setUsername(username);
         chatClient = new ChatClient(host, port, username, this);
         if (chatClient.connect()) {
             chatThread = new Thread(chatClient);
             chatThread.setDaemon(true);
             chatThread.start();
-         property.firePropertyChange("connected", 0, 1);
+            return true;
         }
+        return false;
     }
 
     public void disconnect() {
@@ -55,8 +63,8 @@ public class ChatModel implements Model {
         if (message.isIPRequest()) {
             System.out.println(message.getMessage());
             //todo send to viewmodel
-        } else if(message.isConnectedUpdate()) {
-            connectedUsers = Integer.parseInt(message.getMessage());
+        } else if (message.isConnectedUpdate()) {
+            setConnectedUsers(Integer.parseInt(message.getMessage()));
             System.out.println(connectedUsers);
             //todo send to viewmodel
         } else {

@@ -10,39 +10,40 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 
-public class LoginController
-{
-  @FXML private TextField IPAddressField;
+public class LoginController {
+    @FXML
+    private TextField IPAddressField;
 
-  @FXML private TextField portLoginField;
+    @FXML
+    private TextField portLoginField;
 
-  @FXML private TextField userNameLoginField;
+    @FXML
+    private TextField userNameLoginField;
 
-  @FXML private Button connectButton;
+    @FXML
+    private Button connectButton;
 
-  private Region root;
-  private ViewHandler viewHandler;
-  private LoginViewModel loginViewModel;
+    private Region root;
+    private ViewHandler viewHandler;
+    private LoginViewModel loginViewModel;
 
-  public void init(ViewHandler viewHandler, LoginViewModel loginViewModel,
-      Region root)
-  {
-    this.viewHandler = viewHandler;
-    this.loginViewModel = loginViewModel;
-    this.root = root;
-  }
+    public void init(ViewHandler viewHandler, LoginViewModel loginViewModel, Region root) {
+        this.viewHandler = viewHandler;
+        this.loginViewModel = loginViewModel;
+        this.root = root;
+    }
 
-  public void reset()
-  {
-  }
+    public void reset() {
+    }
 
-  public Region getRoot()
-  {
-    return root;
-  }
-  @FXML
-    private void connectButtonPressed(){
-      viewHandler.openView("chat");
-  }
+    public Region getRoot() {
+        return root;
+    }
+
+    @FXML
+    private void connectButtonPressed() {
+        //todo if model.connect returns true change view, else show error
+        viewHandler.openView("chat");
+    }
 
 }

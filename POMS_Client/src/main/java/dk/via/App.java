@@ -41,7 +41,7 @@ public class App extends Application {
     }*/
 
     public static void main(String[] args) throws IOException {
-     /*   //todo temporary, delete everything after GUI made
+       /* //todo temporary, delete everything after GUI made
         Scanner input = new Scanner(System.in);
         System.out.print("Server IP: ");
         String host = input.nextLine();
@@ -52,10 +52,7 @@ public class App extends Application {
         String user = input.nextLine();
 
         Model model = new ChatModel();
-        model.setHost(host);
-        model.setPort(port);
-        model.setUsername(user);
-        model.connect();
+        model.connect(host, port, user);
 
         while (true) {
             String msg = input.nextLine();
@@ -65,10 +62,8 @@ public class App extends Application {
             else
                 send = new Message(user, msg);
             model.sendMessage(send);
-        }
-//        input.close();
+        }*/
 
-*/
-       launch(); //todo don't delete this tho
+//       launch(); //todo don't delete this tho
     }
 }
