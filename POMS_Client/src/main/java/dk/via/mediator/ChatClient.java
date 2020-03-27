@@ -56,6 +56,8 @@ public class ChatClient implements ServerModel, Runnable {
     public boolean connect() throws IOException {
         out.println("/connect");
         String reply = in.readLine();
+        int users = Integer.parseInt(in.readLine());
+        System.out.println(users);
         if (reply.equals("/connected")) {
             System.out.println("connected");
             return true;
@@ -73,11 +75,12 @@ public class ChatClient implements ServerModel, Runnable {
         //sends message to server
         out.println(gson.toJson(message));
     }
-
+    //TODO had to comment this out
+/*
     @Override
     public void requestIP() throws IOException {
         //requests ip from server
         //todo move return into thread + MVVM fire event
         out.println(gson.toJson(new Message(user, "", true)));
-    }
+    }*/
 }

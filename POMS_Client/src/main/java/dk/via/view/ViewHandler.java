@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 public class ViewHandler {
     private ViewModelFactory viewModelFactory;
-    private LoginView loginController;
-    private ChatView chatController;
+    private LoginController loginController;
+    private ChatController chatController;
     private Scene currentScene;
     private Stage primaryStage;
 
@@ -51,7 +51,7 @@ public class ViewHandler {
         Region root = null;
         if (loginController == null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/via/"+fxmlFile));
                 root = loader.load();
                 loginController = loader.getController();
                 loginController.init(this, viewModelFactory.getLoginViewModel(), root);
@@ -68,7 +68,7 @@ public class ViewHandler {
         Region root = null;
         if (chatController == null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/via/"+fxmlFile));
                 root = loader.load();
                 chatController = loader.getController();
                 chatController.init(this,viewModelFactory.getChatViewModel(), root);

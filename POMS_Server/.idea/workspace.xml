@@ -3,7 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="997e425f-c055-43a3-82fe-53d7d80e5da7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/mediator/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/mediator/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/ChatModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/ChatClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/ServerModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/ServerModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/ChatModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/ChatModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/ChatView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/LoginView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/ViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/ViewHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ChatViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ChatViewModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/LoginViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/LoginViewModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ViewModelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ViewModelFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Broadcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broadcaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ClientHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

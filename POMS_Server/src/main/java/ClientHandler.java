@@ -33,6 +33,7 @@ public class ClientHandler implements Runnable {
                 out.println("Disconnected");
             else {
                 out.println("/connected");
+                out.println(broadcaster.getNumberOfClients());
                 boolean userConnected = true;
                 do {
                     //reads message from server

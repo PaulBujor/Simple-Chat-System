@@ -7,9 +7,14 @@ import java.io.IOException;
 
 public interface Model extends PropertyChangeSubject {
     public void receiveMessage(Message message);
+
     public void setHost(String host);
+
     public void setPort(int port);
+
     public void setUsername(String username);
-    public void connect() throws IOException;
+
+    public boolean connect(String host, int port, String username) throws IOException;
+
     public void sendMessage(Message message);
 }
