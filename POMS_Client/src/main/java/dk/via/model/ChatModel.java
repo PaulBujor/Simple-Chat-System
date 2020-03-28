@@ -22,6 +22,7 @@ public class ChatModel implements Model {
 
     public ChatModel() throws IOException {
         messages = new ArrayList<Message>();
+        property = new PropertyChangeSupport(this);
     }
 
     public void setHost(String host) {
