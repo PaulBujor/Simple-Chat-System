@@ -16,6 +16,4 @@ public class TableRowData {
     return userMessage;
   }
 
-
-
 }
