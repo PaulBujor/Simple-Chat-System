@@ -46,8 +46,7 @@
       </AnchorPane>
       <TableView id="chatTable" layoutX="41.0" layoutY="106.0" prefHeight="508.0" prefWidth="1118.0" stylesheets="@css/style.css" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="106.0">
         <columns>
-          <TableColumn prefWidth="559.0" text="C1" />
-          <TableColumn prefWidth="558.0" text="C2" />
+          <TableColumn prefWidth="1118.0" text="C1" />
         </columns>
       </TableView>
       <AnchorPane layoutX="41.0" layoutY="640.0" prefHeight="73.0" prefWidth="1118.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
