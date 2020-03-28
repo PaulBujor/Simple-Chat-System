@@ -44,7 +44,7 @@ public class LoginController {
         IPAddressField.textProperty()
                 .bindBidirectional(loginViewModel.hostProperty());
 
-        userNameLoginField.textProperty().bindBidirectional(loginViewModel.usernameProperty());
+        userNameLoginField.textProperty().bindBidirectional(loginViewModel.userNameProperty());
 
         errorLabel.textProperty().bind(loginViewModel.errorProperty());
 

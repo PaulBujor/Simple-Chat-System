@@ -30,13 +30,13 @@ public class LoginViewModel {
     }
 
     public void connect() throws IOException {
-      try {
-        connectedProperty().setValue(model.connect(hostProperty().get(), port.get(), userNameProperty().get()));
-      } catch (UnknownHostException e) {
-        error.set("Could not find host");
-      } catch (SocketException e) {
-        error.set("An error has occured");
-      }
+        try {
+            connectedProperty().setValue(model.connect(hostProperty().get(), port.get(), userNameProperty().get()));
+        } catch (UnknownHostException e) {
+            error.set("Could not find host");
+        } catch (SocketException e) {
+            error.set("An error has occured");
+        }
     }
 
     public StringProperty userNameProperty() {
@@ -44,7 +44,7 @@ public class LoginViewModel {
     }
 
     public StringProperty errorProperty() {
-      return error;
+        return error;
     }
 
     public IntegerProperty portProperty() {
