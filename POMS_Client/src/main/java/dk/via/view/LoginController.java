@@ -25,6 +25,7 @@ public class LoginController
 
   @FXML private Label errorLabel = null;
 
+
   private Region root;
   private ViewHandler viewHandler;
   private LoginViewModel loginViewModel;
@@ -32,6 +33,20 @@ public class LoginController
   public LoginController()
   {
   }
+
+    public void init(ViewHandler viewHandler, LoginViewModel loginViewModel, Region root) {
+        this.viewHandler = viewHandler;
+        this.loginViewModel = loginViewModel;
+        this.root = root;
+
+
+
+    }
+
+    public void reset() {
+
+    }
+
 
   public void init(ViewHandler viewHandler, LoginViewModel loginViewModel,
       Region root)

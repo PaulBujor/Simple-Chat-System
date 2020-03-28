@@ -18,6 +18,7 @@ public class ChatModel implements Model {
     private int port;
     private String username;
     private int connectedUsers = 0;
+    private String clientIP;
 
     public ChatModel() throws IOException {
         messages = new ArrayList<Message>();
@@ -35,6 +36,25 @@ public class ChatModel implements Model {
         this.username = username;
     }
 
+    public String getUsername()
+    {
+        return this.username;
+    }
+
+    public int getConnectedUsers() {
+        return this.connectedUsers;
+    }
+
+    @Override
+    public void setIP(String ip) {
+        clientIP = ip;
+    }
+
+    @Override
+    public String getIP() {
+        return clientIP;
+    }
+
     public void setConnectedUsers(int connectedUsers) {
         this.connectedUsers = connectedUsers;
     }
@@ -48,6 +68,7 @@ public class ChatModel implements Model {
             chatThread = new Thread(chatClient);
             chatThread.setDaemon(true);
             chatThread.start();
+            sendMessage(new Message("user", "", true));
             return true;
         }
         return false;
@@ -62,10 +83,11 @@ public class ChatModel implements Model {
     public void receiveMessage(Message message) {
         if (message.isIPRequest()) {
             System.out.println(message.getMessage());
-            //todo send to viewmodel
+            clientIP = message.getMessage();
         } else if (message.isConnectedUpdate()) {
             setConnectedUsers(Integer.parseInt(message.getMessage()));
             System.out.println(connectedUsers);
+            property.firePropertyChange("connectedUpdate", 0, 1);
             //todo send to viewmodel
         } else {
             messages.add(message);

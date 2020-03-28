@@ -14,6 +14,14 @@ public interface Model extends PropertyChangeSubject {
 
     public void setUsername(String username);
 
+    public String getUsername();
+
+    public int getConnectedUsers();
+
+    public void setIP(String ip);
+
+    public String getIP();
+
     public boolean connect(String host, int port, String username) throws IOException;
 
     public void sendMessage(Message message);

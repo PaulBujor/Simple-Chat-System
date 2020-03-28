@@ -3,7 +3,9 @@ package dk.via.view;
 import java.io.IOException;
 
 import dk.via.App;
+import dk.via.utility.StringIntegerConverter;
 import dk.via.viewmodel.ChatViewModel;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -37,6 +39,11 @@ public class ChatController {
         this.viewHandler = viewHandler;
         this.chatViewModel = chatViewModel;
         this.root = root;
+
+        userNameLabel.textProperty().bind(chatViewModel.usernameProperty());
+        Bindings.bindBidirectional(onlineUsers.textProperty(), chatViewModel.connectedUsersProperty(), new StringIntegerConverter(0));
+
+
 
 
     }
