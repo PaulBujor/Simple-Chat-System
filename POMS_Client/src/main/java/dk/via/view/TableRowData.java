@@ -9,7 +9,7 @@ public class TableRowData {
   private StringProperty userMessage;
 
   public TableRowData(Message message){
-    this.userMessage = new SimpleStringProperty(message.getMessage());
+    this.userMessage = new SimpleStringProperty(message.toString());
   }
 
   public StringProperty getUserMessage(){

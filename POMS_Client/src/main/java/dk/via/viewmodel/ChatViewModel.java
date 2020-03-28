@@ -32,14 +32,18 @@ public class ChatViewModel implements PropertyChangeListener {
         list = createList();
         model.addListener(this);
     }
-public StringProperty getClientMessage(){
-        return clientMessage;
-}
 
-    public void sendMessage(){
-        model.sendMessage(new Message(model.getUsername(),clientMessage.get()));
-        clientMessage.set(null);
+    public StringProperty getClientMessage() {
+        return clientMessage;
     }
+
+    public void sendMessage() {
+        if (!clientMessage.get().equals("")) {
+            model.sendMessage(new Message(model.getUsername(), clientMessage.get()));
+            clientMessage.set("");
+        }
+    }
+
     public StringProperty usernameProperty() {
         return username;
     }
@@ -88,9 +92,9 @@ public StringProperty getClientMessage(){
 
     public void addToList(Message message) {
         Platform.runLater(() -> {
-            list.add(0, new TableRowData(message));
-            if (list.size() > 50) {
-                list.remove(list.size() - 1);
+            list.add(new TableRowData(message));
+            if (list.size() > 21) {
+                list.remove(0);
             }
         });
     }

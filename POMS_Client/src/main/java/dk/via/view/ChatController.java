@@ -47,11 +47,13 @@ public class ChatController {
 
         clientMessage.textProperty().bindBidirectional(chatViewModel.getClientMessage());
 
+        clientMessage.setOnKeyPressed((evt) -> {
+            if(evt.getCode().toString().equals("ENTER"))
+                sendButtonPressed();
+        });
+
         messageColumn.setCellValueFactory(cellData -> cellData.getValue().getUserMessage());
-chatTable.setItems(chatViewModel.getList());
-
-
-
+        chatTable.setItems(chatViewModel.getList());
     }
 
     public void reset() {
@@ -63,6 +65,6 @@ chatTable.setItems(chatViewModel.getList());
 
     @FXML
     private void sendButtonPressed() {
-chatViewModel.sendMessage();
+        chatViewModel.sendMessage();
     }
 }
