@@ -5,7 +5,9 @@ import java.io.IOException;
 import dk.via.App;
 import dk.via.utility.StringIntegerConverter;
 import dk.via.viewmodel.ChatViewModel;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
+import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Region;
@@ -54,6 +56,8 @@ public class ChatController {
 
         messageColumn.setCellValueFactory(cellData -> cellData.getValue().getUserMessage());
         chatTable.setItems(chatViewModel.getList());
+
+        chatViewModel.getList().addListener((ListChangeListener<TableRowData>) x -> chatTable.scrollTo(chatViewModel.getList().size() - 1));
     }
 
     public void reset() {

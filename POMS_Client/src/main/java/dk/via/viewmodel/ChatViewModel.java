@@ -93,7 +93,7 @@ public class ChatViewModel implements PropertyChangeListener {
     public void addToList(Message message) {
         Platform.runLater(() -> {
             list.add(new TableRowData(message));
-            if (list.size() > 21) {
+            if (list.size() > 25) {
                 list.remove(0);
             }
         });
