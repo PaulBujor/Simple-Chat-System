@@ -37,7 +37,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label id="chatChattersConnected" fx:id="IP" layoutX="35.0" layoutY="41.0" text="0.0.0.0" textFill="WHITE">
+            <Label id="chatChattersConnected" fx:id="chatIPLabel" layoutX="35.0" layoutY="41.0" text="0.0.0.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

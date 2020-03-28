@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cb96fb70-f773-43cc-af82-0404dbdc466f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/view/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/view/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/viewmodel/ChatViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/viewmodel/ChatViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/view/TableRowData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/view/TableRowData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dk/via/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dk/via/chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dk/via/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dk/via/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/ChatViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/ChatViewModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
