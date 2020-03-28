@@ -69,7 +69,8 @@ public class ChatModel implements Model {
             chatThread = new Thread(chatClient);
             chatThread.setDaemon(true);
             chatThread.start();
-            sendMessage(new Message("user", "", true));
+            //TODO this,thanks Paul <3
+            /*sendMessage(new Message("user", "", true));*/
             return true;
         }
         return false;
