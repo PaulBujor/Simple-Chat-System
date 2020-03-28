@@ -7,9 +7,7 @@ import dk.via.utility.StringIntegerConverter;
 import dk.via.viewmodel.ChatViewModel;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Region;
 
 public class ChatController {
@@ -25,7 +23,11 @@ public class ChatController {
     @FXML
     private TextField clientMessage;
 
-    //todo table
+    @FXML
+    private TableView<TableRowData> chatTable;
+
+    @FXML
+    private TableColumn<TableRowData, String> messageColumn;
 
     private Region root;
     private ViewHandler viewHandler;
