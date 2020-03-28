@@ -38,6 +38,16 @@ public class ChatViewModel implements PropertyChangeListener {
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("connectedUpdate")) {
             Platform.runLater(() -> connectedUsers.set(model.getConnectedUsers()));
+        } else if(evt.getPropertyName().equals("loadData")) {
+            System.out.println("loading data");
+            Platform.runLater(() -> {
+                connectedUsers.set(model.getConnectedUsers());
+                username.set(model.getUsername());
+                ip.set(model.getIP());
+            });
+            System.out.println(connectedUsers.get());
+            System.out.println(username.get());
+            System.out.println(ip.get());
         }
 
     }

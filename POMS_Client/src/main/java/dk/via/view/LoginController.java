@@ -45,6 +45,8 @@ public class LoginController {
         IPAddressField.textProperty()
                 .bindBidirectional(loginViewModel.hostProperty());
 
+        userNameLoginField.textProperty().bindBidirectional(loginViewModel.userNameProperty());
+
         Bindings.bindBidirectional(portLoginField.textProperty(),
                 loginViewModel.portProperty(), new StringIntegerConverter(0));
 
