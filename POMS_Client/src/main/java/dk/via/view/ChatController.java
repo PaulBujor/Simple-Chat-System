@@ -46,6 +46,9 @@ public class ChatController {
         Bindings.bindBidirectional(onlineUsers.textProperty(), chatViewModel.connectedUsersProperty(), new StringIntegerConverter(0));
 
 
+        messageColumn.setCellValueFactory(cellData -> cellData.getValue().getUserMessage());
+chatTable.setItems(chatViewModel.getList());
+
 
 
     }
