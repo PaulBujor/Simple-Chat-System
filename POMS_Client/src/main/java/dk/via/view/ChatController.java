@@ -15,7 +15,7 @@ public class ChatController {
     private Label chatIPLabel;
 
     @FXML
-    private Label userNameLabel;
+    private Label usernameLabel;
 
     @FXML
     private Label onlineUsers;
@@ -41,7 +41,7 @@ public class ChatController {
         this.chatViewModel = chatViewModel;
         this.root = root;
 
-        userNameLabel.textProperty().bind(chatViewModel.usernameProperty());
+        usernameLabel.textProperty().bind(chatViewModel.usernameProperty());
         Bindings.bindBidirectional(onlineUsers.textProperty(), chatViewModel.connectedUsersProperty(), new StringIntegerConverter(0));
         chatIPLabel.textProperty().bind(chatViewModel.ipProperty());
 
