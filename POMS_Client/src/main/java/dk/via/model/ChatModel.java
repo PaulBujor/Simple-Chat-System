@@ -69,8 +69,7 @@ public class ChatModel implements Model {
             chatThread = new Thread(chatClient);
             chatThread.setDaemon(true);
             chatThread.start();
-            //TODO this,thanks Paul <3
-            /*sendMessage(new Message("user", "", true));*/
+            sendMessage(new Message("user", "", true));
             return true;
         }
         return false;
@@ -84,13 +83,12 @@ public class ChatModel implements Model {
     @Override
     public void receiveMessage(Message message) {
         if (message.isIPRequest()) {
-            System.out.println(message.getMessage());
             clientIP = message.getMessage();
+            property.firePropertyChange("loadData", 0, 1);
         } else if (message.isConnectedUpdate()) {
             setConnectedUsers(Integer.parseInt(message.getMessage()));
             System.out.println(connectedUsers);
             property.firePropertyChange("connectedUpdate", 0, 1);
-            //todo send to viewmodel
         } else {
             messages.add(message);
             System.out.println(message);
