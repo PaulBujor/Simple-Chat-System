@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class LoginViewModel implements PropertyChangeListener
 {
-  private StringProperty userName;
+  private StringProperty username;
   private IntegerProperty port;
   private StringProperty host;
 
@@ -21,7 +21,7 @@ public class LoginViewModel implements PropertyChangeListener
   public LoginViewModel(Model model)
   {
     this.model = model;
-    this.userName = new SimpleStringProperty();
+    this.username = new SimpleStringProperty();
     this.port = new SimpleIntegerProperty();
     this.host = new SimpleStringProperty();
     this.connected = new SimpleBooleanProperty(false);
@@ -30,13 +30,14 @@ public class LoginViewModel implements PropertyChangeListener
 
   public void connect() throws IOException
   {
-    connectedProperty().setValue(model.connect(hostProperty().get(),port.get(),userNameProperty().get()));
+    connectedProperty().setValue(model.connect(hostProperty().get(),port.get(),
+        usernameProperty().get()));
   }
 
 
-  public StringProperty userNameProperty()
+  public StringProperty usernameProperty()
   {
-    return userName;
+    return username;
   }
 
 
