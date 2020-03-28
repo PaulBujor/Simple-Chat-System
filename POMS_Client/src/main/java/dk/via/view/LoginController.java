@@ -49,11 +49,11 @@ public class LoginController {
                 loginViewModel.portProperty(), new StringIntegerConverter(0));
 
         loginViewModel.connectedProperty().addListener((evt) -> {
-            if (loginViewModel.connectedProperty().get() == true)
+            if (loginViewModel.connectedProperty().get())
                 viewHandler.openView("chat");
             else
                 errorLabel.setText("Connection to the server failed...");
-        }));
+        });
     }
 
     public void reset() {
