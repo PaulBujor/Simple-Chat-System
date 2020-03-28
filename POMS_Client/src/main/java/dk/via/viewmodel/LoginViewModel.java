@@ -7,60 +7,56 @@ import javafx.beans.property.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 
-public class LoginViewModel implements PropertyChangeListener
-{
-  private StringProperty userName;
-  private IntegerProperty port;
-  private StringProperty host;
+public class LoginViewModel {
+    private StringProperty userName;
+    private IntegerProperty port;
+    private StringProperty host;
+    private StringProperty error;
 
-  private BooleanProperty connected;
+    private BooleanProperty connected;
 
-  private Model model;
+    private Model model;
 
-  public LoginViewModel(Model model)
-  {
-    this.model = model;
-    this.userName = new SimpleStringProperty();
-    this.port = new SimpleIntegerProperty();
-    this.host = new SimpleStringProperty();
-    this.connected = new SimpleBooleanProperty(false);
+    public LoginViewModel(Model model) {
+        this.model = model;
+        userName = new SimpleStringProperty();
+        port = new SimpleIntegerProperty();
+        host = new SimpleStringProperty();
+        connected = new SimpleBooleanProperty(false);
+        error = new SimpleStringProperty();
+    }
 
-  }
+    public void connect() throws IOException {
+      try {
+        connectedProperty().setValue(model.connect(hostProperty().get(), port.get(), userNameProperty().get()));
+      } catch (UnknownHostException e) {
+        error.set("Could not find host");
+      } catch (SocketException e) {
+        error.set("An error has occured");
+      }
+    }
 
-  public void connect() throws IOException
-  {
-    connectedProperty().setValue(model.connect(hostProperty().get(),port.get(),userNameProperty().get()));
-  }
+    public StringProperty userNameProperty() {
+        return userName;
+    }
 
+    public StringProperty errorProperty() {
+      return error;
+    }
 
-  public StringProperty userNameProperty()
-  {
-    return userName;
-  }
-
-
-
-  public IntegerProperty portProperty()
-  {
-    return port;
-  }
-
-
-
-  public StringProperty hostProperty()
-  {
-    return host;
-  }
+    public IntegerProperty portProperty() {
+        return port;
+    }
 
 
-  public BooleanProperty connectedProperty()
-  {
-    return connected;
-  }
+    public StringProperty hostProperty() {
+        return host;
+    }
 
-  @Override public void propertyChange(PropertyChangeEvent evt)
-  {
-
-  }
+    public BooleanProperty connectedProperty() {
+        return connected;
+    }
 }

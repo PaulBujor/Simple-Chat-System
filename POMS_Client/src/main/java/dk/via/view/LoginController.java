@@ -28,7 +28,7 @@ public class LoginController {
     private Button connectButton;
 
     @FXML
-    private Label errorLabel = null;
+    private Label errorLabel;
 
     private Region root;
     private ViewHandler viewHandler;
@@ -46,6 +46,8 @@ public class LoginController {
                 .bindBidirectional(loginViewModel.hostProperty());
 
         userNameLoginField.textProperty().bindBidirectional(loginViewModel.userNameProperty());
+
+        errorLabel.textProperty().bind(loginViewModel.errorProperty());
 
         Bindings.bindBidirectional(portLoginField.textProperty(),
                 loginViewModel.portProperty(), new StringIntegerConverter(0));

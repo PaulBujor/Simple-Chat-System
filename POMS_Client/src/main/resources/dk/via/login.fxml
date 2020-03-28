@@ -77,7 +77,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Label id="errorLabel" fx:id="errorLoginLabel" layoutX="168.0" layoutY="630.0" prefHeight="38.0" prefWidth="374.0" textFill="#e81313" />
+            <Label id="errorLabel" fx:id="errorLabel" layoutX="168.0" layoutY="630.0" prefHeight="38.0" prefWidth="374.0" textFill="#e81313" />
          </children>
       </AnchorPane>
    </children>
