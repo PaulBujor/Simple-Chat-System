@@ -46,6 +46,9 @@ public class ChatController {
         chatIPLabel.textProperty().bind(chatViewModel.ipProperty());
 
 
+        messageColumn.setCellValueFactory(cellData -> cellData.getValue().getUserMessage());
+chatTable.setItems(chatViewModel.getList());
+
 
 
     }
