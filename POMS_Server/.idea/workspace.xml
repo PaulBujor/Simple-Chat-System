@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="997e425f-c055-43a3-82fe-53d7d80e5da7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/ChatViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/ChatViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/resources/dk/via/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/resources/dk/via/chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
