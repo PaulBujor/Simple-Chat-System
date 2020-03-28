@@ -31,9 +31,13 @@ public class LoginController {
         this.viewHandler = viewHandler;
         this.loginViewModel = loginViewModel;
         this.root = root;
+
+
+
     }
 
     public void reset() {
+
     }
 
     public Region getRoot() {
