@@ -45,9 +45,6 @@ public class ChatViewModel implements PropertyChangeListener {
                 username.set(model.getUsername());
                 ip.set(model.getIP());
             });
-            System.out.println(connectedUsers.get());
-            System.out.println(username.get());
-            System.out.println(ip.get());
         }
 
     }

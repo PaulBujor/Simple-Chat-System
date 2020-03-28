@@ -25,4 +25,6 @@ public interface Model extends PropertyChangeSubject {
     public boolean connect(String host, int port, String username) throws IOException;
 
     public void sendMessage(Message message);
+
+    void setConnectedUsers(int users);
 }

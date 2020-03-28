@@ -57,7 +57,7 @@ public class ChatClient implements ServerModel, Runnable {
         out.println("/connect");
         String reply = in.readLine();
         int users = Integer.parseInt(in.readLine());
-        System.out.println(users);
+        model.setConnectedUsers(users);
         if (reply.equals("/connected")) {
             System.out.println("connected");
             return true;
