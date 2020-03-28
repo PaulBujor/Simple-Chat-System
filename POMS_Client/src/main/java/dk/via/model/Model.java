@@ -4,6 +4,7 @@ import dk.via.utility.Message;
 import dk.via.utility.PropertyChangeSubject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public interface Model extends PropertyChangeSubject {
     public void receiveMessage(Message message);
@@ -27,4 +28,5 @@ public interface Model extends PropertyChangeSubject {
     public void sendMessage(Message message);
 
     void setConnectedUsers(int users);
+    public ArrayList<Message> getMessages(int number);
 }

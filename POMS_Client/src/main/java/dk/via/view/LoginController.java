@@ -52,8 +52,6 @@ public class LoginController {
         loginViewModel.connectedProperty().addListener((evt) -> {
             if (loginViewModel.connectedProperty().get())
                 viewHandler.openView("chat");
-            else
-                errorLabel.setText("Connection to the server failed...");
         });
     }
 

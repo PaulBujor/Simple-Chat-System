@@ -60,6 +60,16 @@ public class ChatModel implements Model {
         this.connectedUsers = connectedUsers;
     }
 
+    @Override public ArrayList<Message> getMessages(int number)
+    {
+        ArrayList<Message> result = new ArrayList<>();
+        int limit = Math.min(number,messages.size());
+        for(int i = messages.size()-1;i> messages.size()-limit;i++){
+            result.add(messages.get(i));
+        }
+        return result;
+    }
+
     public boolean connect(String host, int port, String username) throws IOException {
         setHost(host);
         setPort(port);
@@ -91,7 +101,7 @@ public class ChatModel implements Model {
         } else {
             messages.add(message);
             System.out.println(message);
-//            property.firePropertyChange("message", 0, message);
+            property.firePropertyChange("message", 0, message);
         }
     }
 
