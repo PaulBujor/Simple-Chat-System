@@ -33,7 +33,6 @@ public class ChatController {
     private ViewHandler viewHandler;
     private ChatViewModel chatViewModel;
 
-
     public ChatController() {
     }
 
@@ -44,6 +43,7 @@ public class ChatController {
 
         userNameLabel.textProperty().bind(chatViewModel.usernameProperty());
         Bindings.bindBidirectional(onlineUsers.textProperty(), chatViewModel.connectedUsersProperty(), new StringIntegerConverter(0));
+        chatIPLabel.textProperty().bind(chatViewModel.ipProperty());
 
 
         messageColumn.setCellValueFactory(cellData -> cellData.getValue().getUserMessage());

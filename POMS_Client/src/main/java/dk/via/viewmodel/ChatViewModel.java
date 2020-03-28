@@ -33,6 +33,7 @@ public class ChatViewModel implements PropertyChangeListener
     model.addListener(this);
   }
 
+
   public StringProperty usernameProperty()
   {
     return username;
@@ -42,6 +43,15 @@ public class ChatViewModel implements PropertyChangeListener
   {
     return connectedUsers;
   }
+
+    public ChatViewModel(Model model) {
+        this.model = model;
+        username = new SimpleStringProperty();
+        connectedUsers = new SimpleIntegerProperty();
+        ip = new SimpleStringProperty();
+        model.addListener(this);
+    }
+
 
   @Override public void propertyChange(PropertyChangeEvent evt)
   {
@@ -81,6 +91,24 @@ public class ChatViewModel implements PropertyChangeListener
     public ObservableList<TableRowData> getList(){
       return list;
     }
+
+    public StringProperty ipProperty() {
+        return ip;
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
+        if (evt.getPropertyName().equals("connectedUpdate")) {
+            Platform.runLater(() -> connectedUsers.set(model.getConnectedUsers()));
+        } else if(evt.getPropertyName().equals("loadData")) {
+            System.out.println("loading data");
+            Platform.runLater(() -> {
+                connectedUsers.set(model.getConnectedUsers());
+                username.set(model.getUsername());
+                ip.set(model.getIP());
+            });
+        }
+
 
     public void addToList(Message message){
       Platform.runLater(()->{
