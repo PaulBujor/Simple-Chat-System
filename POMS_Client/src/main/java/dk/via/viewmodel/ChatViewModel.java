@@ -20,9 +20,9 @@ public class ChatViewModel implements PropertyChangeListener {
 
     public ChatViewModel(Model model) {
         this.model = model;
-        username = new SimpleStringProperty(model.getUsername());
-        connectedUsers = new SimpleIntegerProperty(model.getConnectedUsers());
-        ip = new SimpleStringProperty(model.getIP());
+        username = new SimpleStringProperty();
+        connectedUsers = new SimpleIntegerProperty();
+        ip = new SimpleStringProperty();
         model.addListener(this);
     }
 
@@ -32,6 +32,10 @@ public class ChatViewModel implements PropertyChangeListener {
 
     public IntegerProperty connectedUsersProperty() {
         return connectedUsers;
+    }
+
+    public StringProperty ipProperty() {
+        return ip;
     }
 
     @Override
