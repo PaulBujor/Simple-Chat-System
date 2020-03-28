@@ -2,7 +2,6 @@ package dk.via.view;
 
 import java.io.IOException;
 
-import dk.via.App;
 import dk.via.utility.StringIntegerConverter;
 import dk.via.viewmodel.LoginViewModel;
 import javafx.beans.binding.Bindings;
@@ -45,7 +44,7 @@ public class LoginController {
         IPAddressField.textProperty()
                 .bindBidirectional(loginViewModel.hostProperty());
 
-        userNameLoginField.textProperty().bindBidirectional(loginViewModel.userNameProperty());
+        userNameLoginField.textProperty().bindBidirectional(loginViewModel.usernameProperty());
 
         errorLabel.textProperty().bind(loginViewModel.errorProperty());
 
