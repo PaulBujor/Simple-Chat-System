@@ -45,6 +45,7 @@ public class ChatController {
         Bindings.bindBidirectional(onlineUsers.textProperty(), chatViewModel.connectedUsersProperty(), new StringIntegerConverter(0));
         chatIPLabel.textProperty().bind(chatViewModel.ipProperty());
 
+        clientMessage.textProperty().bindBidirectional(chatViewModel.getClientMessage());
 
         messageColumn.setCellValueFactory(cellData -> cellData.getValue().getUserMessage());
 chatTable.setItems(chatViewModel.getList());
@@ -62,6 +63,6 @@ chatTable.setItems(chatViewModel.getList());
 
     @FXML
     private void sendButtonPressed() {
-
+chatViewModel.sendMessage();
     }
 }

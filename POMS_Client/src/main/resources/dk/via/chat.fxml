@@ -44,7 +44,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <TableView id="chatTable" layoutX="41.0" layoutY="106.0" prefHeight="508.0" prefWidth="1118.0" stylesheets="@css/style.css" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="106.0">
+      <TableView id="chatTable" fx:id="chatTable" layoutX="41.0" layoutY="106.0" prefHeight="508.0" prefWidth="1118.0" stylesheets="@css/style.css" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="106.0">
         <columns>
           <TableColumn id="messageColumn" fx:id="messageColumn" prefWidth="1118.0" text="C1" />
         </columns>

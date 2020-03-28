@@ -21,16 +21,25 @@ public class ChatViewModel implements PropertyChangeListener {
     private IntegerProperty connectedUsers;
     private StringProperty ip;
     private ObservableList<TableRowData> list;
+    private StringProperty clientMessage;
 
     public ChatViewModel(Model model) {
         this.model = model;
         username = new SimpleStringProperty(model.getUsername());
         connectedUsers = new SimpleIntegerProperty(model.getConnectedUsers());
         ip = new SimpleStringProperty(model.getIP());
+        clientMessage = new SimpleStringProperty();
         list = createList();
         model.addListener(this);
     }
+public StringProperty getClientMessage(){
+        return clientMessage;
+}
 
+    public void sendMessage(){
+        model.sendMessage(new Message(model.getUsername(),clientMessage.get()));
+        clientMessage.set(null);
+    }
     public StringProperty usernameProperty() {
         return username;
     }
