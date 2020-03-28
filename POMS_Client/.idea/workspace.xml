@@ -3,16 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="cb96fb70-f773-43cc-af82-0404dbdc466f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/view/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/viewmodel/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/viewmodel/LoginViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dk/via/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dk/via/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/model/ChatModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/model/ChatModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/model/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/view/ViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/view/ViewHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/view/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/view/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/view/TableRowData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/view/TableRowData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/via/viewmodel/ChatViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/via/viewmodel/ChatViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/mediator/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/mediator/ChatClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/mediator/ServerModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/mediator/ServerModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/utility/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/utility/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/utility/PropertyChangeSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/utility/PropertyChangeSubject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/ChatViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/ChatViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/LoginViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/LoginViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/ViewModelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/viewmodel/ViewModelFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Server/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Server/src/main/java/ClientHandler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="86" />
+    <option name="myElementSize" value="207" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,7 +123,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/POMS_Client$App.ic" NAME="App Coverage Results" MODIFIED="1585314423133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/POMS_Client$App.ic" NAME="App Coverage Results" MODIFIED="1585410762242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dk.via.view.*</FILTER>
     </SUITE>
   </component>

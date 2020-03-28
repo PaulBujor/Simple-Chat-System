@@ -38,18 +38,21 @@ public class ClientHandler implements Runnable {
                 do {
                     //reads message from server
                     Message message = gson.fromJson(in.readLine(), Message.class);
-                    if(message.isIPRequest())
-                        out.println(gson.toJson(new Message("server", socket.getInetAddress().toString(), true))); //returns IP address of client
-                    else if(message.getMessage().equals("/disconnect")) {
-                        System.out.println("Disconnected");
-                        userConnected = false; //condition to exit loop
-                        broadcaster.removeClient(this); //removes current client from Broadcaster
-                    }
-                    else {
-                        //sends message
-                        System.out.println("message sent");
-                        System.out.println(message);
-                        broadcaster.send(message);
+                    try {
+                        if (message.isIPRequest())
+                            out.println(gson.toJson(new Message("server", socket.getInetAddress().toString(), true))); //returns IP address of client
+                        else if (message.getMessage().equals("/disconnect")) {
+                            System.out.println("Disconnected");
+                            userConnected = false; //condition to exit loop
+                            broadcaster.removeClient(this); //removes current client from Broadcaster
+                        } else {
+                            //sends message
+                            System.out.println("message sent");
+                            System.out.println(message);
+                            broadcaster.send(message);
+                        }
+                    } catch (NullPointerException e) {
+                        broadcaster.removeClient(this);
                     }
                 } while (userConnected);
             }
