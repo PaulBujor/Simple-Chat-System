@@ -1,0 +1,15 @@
+dk\via\viewmodel\LoginViewModel.class
+dk\via\mediator\ChatClient.class
+dk\via\model\ChatModel.class
+dk\via\utility\Message.class
+dk\via\view\LoginController.class
+dk\via\viewmodel\ViewModelFactory.class
+dk\via\view\ChatController.class
+dk\via\utility\StringIntegerConverter.class
+dk\via\mediator\ServerModel.class
+dk\via\viewmodel\ChatViewModel.class
+module-info.class
+dk\via\utility\PropertyChangeSubject.class
+dk\via\view\ViewHandler.class
+dk\via\model\Model.class
+dk\via\App.class
