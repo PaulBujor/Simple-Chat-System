@@ -128,4 +128,5 @@ public class ChatModel implements Model {
     public void removeListener(String eventID, PropertyChangeListener listener) {
         property.removePropertyChangeListener(eventID, listener);
     }
+    //TODO TEST
 }
