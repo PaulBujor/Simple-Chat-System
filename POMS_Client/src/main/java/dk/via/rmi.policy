@@ -1,0 +1,27 @@
+grant {
+permission java.net.SocketPermission "*:1024-65535", "connect,accept";
+permission java.net.SocketPermission "*:80", "connect";
+    permission java.security.AllPermission;
+};
+
+grant codeBase "file:%PATH_TO_FX%/javafx.base.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:%PATH_TO_FX%/javafx.controls.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:%PATH_TO_FX%/javafx.fxml.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:%PATH_TO_FX%/javafx.graphics.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:%PATH_TO_FX%/javafx.media.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:%PATH_TO_FX%/javafx.swing.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:%PATH_TO_FX%/javafx.web.jar" {
+    permission java.security.AllPermission;
+};

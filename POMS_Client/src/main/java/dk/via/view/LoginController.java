@@ -18,9 +18,6 @@ public class LoginController {
     private TextField IPAddressField;
 
     @FXML
-    private TextField portLoginField;
-
-    @FXML
     private TextField userNameLoginField;
 
     @FXML
@@ -47,9 +44,6 @@ public class LoginController {
         userNameLoginField.textProperty().bindBidirectional(loginViewModel.userNameProperty());
 
         errorLabel.textProperty().bind(loginViewModel.errorProperty());
-
-        Bindings.bindBidirectional(portLoginField.textProperty(),
-                loginViewModel.portProperty(), new StringIntegerConverter(0));
 
         loginViewModel.connectedProperty().addListener((evt) -> {
             if (loginViewModel.connectedProperty().get())

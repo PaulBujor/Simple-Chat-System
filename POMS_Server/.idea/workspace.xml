@@ -2,13 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="997e425f-c055-43a3-82fe-53d7d80e5da7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/all.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/rmi.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/chat.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/css/huinea2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/RemoteClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/RemoteServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/utility/StringIntegerConverter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/ChatController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/LoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/TableRowData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POMS_Client/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/POMS_Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/via/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/via/rmi.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/RemoteClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/RemoteServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dk/via/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dk/via/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dk/via/mediator/RemoteClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dk/via/mediator/RemoteServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/ChatViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/ChatViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ChatViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ChatViewModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/mediator/ChatClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/mediator/ServerModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/ChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/ChatModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/utility/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/utility/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/view/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/LoginViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/ViewModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/dk/via/viewmodel/ViewModelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/src/main/resources/dk/via/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/src/main/resources/dk/via/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/ChatClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/mediator/ServerModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/ChatModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/ChatModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/model/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/utility/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/utility/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/utility/PropertyChangeSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/utility/PropertyChangeSubject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/ViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/view/ViewHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/LoginViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/LoginViewModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ViewModelFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/dk/via/viewmodel/ViewModelFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POMS_Client/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POMS_Client/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Broadcaster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ServerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utility/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utility/PropertyChangeSubject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/chat.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/css/huinea2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/mediator/ChatClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/mediator/ServerModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/model/ChatModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/model/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/utility/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/utility/PropertyChangeSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/utility/StringIntegerConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/view/ChatController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/view/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/view/ViewHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/viewmodel/ChatViewModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/viewmodel/LoginViewModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/dk/via/viewmodel/ViewModelFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/classes/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Client/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/classes/Broadcaster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/classes/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/classes/ServerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/classes/utility/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/classes/utility/PropertyChangeSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDJ2-Assignment-2/POMS_Server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UML/uml.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../UML/uml.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UML/uml.asta.lock" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +109,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,15 +128,25 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/dk/via" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bujor\OneDrive - ViaUC\Skrivebord\SDJ2 Assignment 3\POMS_Server\src\main\java\dk\via" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -51,23 +154,30 @@
       <recent name="utility" />
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bujor\OneDrive - ViaUC\Skrivebord\SDJ2 Assignment 3\POMS_Server\src\main\java" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dk.via.Main" />
+      <module name="POMS_Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.via.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="chat.server" />
+      <module name="POMS_Server" />
+      <option name="VM_PARAMETERS" value="-Djava.security.policy=rmi.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,8 +189,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ServerThread" />
+      <item itemvalue="Application.Main (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ServerThread" />
       </list>
@@ -111,5 +227,42 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1303" y="148" key="#Main" timestamp="1586375457135">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1303" y="148" key="#Main/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586375457135" />
+    <state x="-1560" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586376854871">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1560" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586376854871" />
+    <state width="1879" height="247" key="GridCell.Tab.0.bottom" timestamp="1586791746946">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1879" height="247" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586791746946" />
+    <state width="1495" height="183" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1586428859618" />
+    <state width="1879" height="247" key="GridCell.Tab.0.center" timestamp="1586791746946">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1879" height="247" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586791746946" />
+    <state width="1495" height="183" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1586428859618" />
+    <state width="1879" height="247" key="GridCell.Tab.0.left" timestamp="1586791746946">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1879" height="247" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586791746946" />
+    <state width="1495" height="183" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1586428859618" />
+    <state width="1879" height="247" key="GridCell.Tab.0.right" timestamp="1586791746946">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1879" height="247" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586791746946" />
+    <state width="1495" height="183" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1586428859618" />
+    <state x="579" y="195" key="chooseDestDirectoryDialog" timestamp="1586424540159">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="579" y="195" key="chooseDestDirectoryDialog/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1586424540159" />
   </component>
 </project>

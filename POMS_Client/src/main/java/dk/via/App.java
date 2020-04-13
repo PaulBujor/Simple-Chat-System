@@ -1,7 +1,5 @@
 package dk.via;
 
-import dk.via.mediator.ChatClient;
-import dk.via.mediator.ServerModel;
 import dk.via.model.ChatModel;
 import dk.via.model.Model;
 import dk.via.utility.Message;
@@ -14,6 +12,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.ExportException;
 import java.util.Scanner;
 
 /**
@@ -22,13 +24,23 @@ import java.util.Scanner;
 public class App extends Application {
 
     private static Scene scene;
+    private ChatModel model;
 
     @Override
     public void start(Stage stage) throws IOException {
-      ChatModel model = new ChatModel();
+        model = new ChatModel();
         ViewModelFactory viewModelFactory = new ViewModelFactory(model);
         ViewHandler view = new ViewHandler(viewModelFactory);
         view.start(stage);
+    }
+
+    public static void startRegistry() throws RemoteException {
+        try {
+            Registry reg = LocateRegistry.createRegistry(1099);
+            System.out.println("Registry started...");
+        } catch (ExportException e) {
+            System.out.println("Registry already started?" + e.getMessage());
+        }
     }
 
 /*    public static void setRoot(String fxml) throws IOException {
@@ -41,29 +53,25 @@ public class App extends Application {
     }*/
 
     public static void main(String[] args) throws IOException {
-       /* //todo temporary, delete everything after GUI made
-        Scanner input = new Scanner(System.in);
-        System.out.print("Server IP: ");
-        String host = input.nextLine();
-        System.out.print("Server PORT: ");
-        int port = input.nextInt();
-        input.nextLine();
-        System.out.print("Username: ");
-        String user = input.nextLine();
+        startRegistry();
 
-        Model model = new ChatModel();
-        model.connect(host, port, user);
+        // ( ͡ಠ ʖ̯ ͡ಠ)
+        //it worked last time, fuck this security manager
+        //this was meant to stay in the hand-in
+//        if (System.getSecurityManager() == null) {
+//            System.setSecurityManager(new SecurityManager());
+//        }
 
-        while (true) {
-            String msg = input.nextLine();
-            Message send = null;
-            if (msg.equals("/ip"))
-                send = new Message(user, msg, true);
-            else
-                send = new Message(user, msg);
-            model.sendMessage(send);
-        }*/
+        launch();
+    }
 
-       launch(); //todo don't delete this tho
+    @Override
+    public void stop() throws Exception {
+        try {
+            model.disconnect();
+        } catch (NullPointerException e) {
+            //this happens if user quits when in login view
+        }
+        super.stop();
     }
 }

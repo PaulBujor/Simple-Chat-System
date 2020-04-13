@@ -1,21 +1,23 @@
 package dk.via.model;
 
-import dk.via.mediator.ChatClient;
+import dk.via.mediator.Client;
 import dk.via.utility.Message;
-import javafx.beans.property.IntegerProperty;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public class ChatModel implements Model {
     private PropertyChangeSupport property;
     private ArrayList<Message> messages;
-    private ChatClient chatClient;
+    private Client remoteClient;
     private Thread chatThread;
     private String host;
-    private int port;
     private String username;
     private int connectedUsers = 0;
     private String clientIP;
@@ -29,16 +31,11 @@ public class ChatModel implements Model {
         this.host = host;
     }
 
-    public void setPort(int port) {
-        this.port = port;
-    }
-
     public void setUsername(String username) {
         this.username = username;
     }
 
-    public String getUsername()
-    {
+    public String getUsername() {
         return this.username;
     }
 
@@ -58,55 +55,69 @@ public class ChatModel implements Model {
 
     public void setConnectedUsers(int connectedUsers) {
         this.connectedUsers = connectedUsers;
+        property.firePropertyChange("connectedUpdate", 0, 1);
     }
 
-    @Override public ArrayList<Message> getMessages(int number)
-    {
+    @Override
+    public ArrayList<Message> getMessages(int number) {
         ArrayList<Message> result = new ArrayList<>();
-        int limit = Math.min(number,messages.size());
-        for(int i = messages.size()-1;i> messages.size()-limit;i++){
+        int limit = Math.min(number, messages.size());
+        for (int i = messages.size() - 1; i > messages.size() - limit; i--) {
             result.add(messages.get(i));
         }
         return result;
     }
 
-    public boolean connect(String host, int port, String username) throws IOException {
+    public static String getMyIP() {
+        try {
+            URL aws = new URL("http://checkip.amazonaws.com");
+            BufferedReader in = new BufferedReader(new InputStreamReader(
+                    aws.openStream()));
+
+            String ip = in.readLine();
+            return ip;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Could not get IP";
+        }
+    }
+
+    public boolean connect(String host, String username) throws IOException {
         setHost(host);
-        setPort(port);
+        setIP(host);
         setUsername(username);
-        chatClient = new ChatClient(host, port, username, this);
-        if (chatClient.connect()) {
-            chatThread = new Thread(chatClient);
-            chatThread.setDaemon(true);
-            chatThread.start();
-            sendMessage(new Message(username, "", true));
+        remoteClient = new Client(this);
+        remoteClient.start();
+        //uses localhost when connecting to local server, and global ip when connecting to external server, will probably shit it's pants in some sitations
+        if (remoteClient.connect(host.equals("localhost") || host.equals("127.0.0.1") ? "localhost" : getMyIP())) {
+            property.firePropertyChange("loadData", 0, 1);
             return true;
         }
         return false;
     }
 
+
     public void disconnect() {
-        chatClient.disconnect();
-        chatThread.interrupt();
+        try {
+            remoteClient.disconnect(getIP());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void receiveMessage(Message message) {
-        if (message.isIPRequest()) {
-            clientIP = message.getMessage();
-            property.firePropertyChange("loadData", 0, 1);
-        } else if (message.isConnectedUpdate()) {
-            setConnectedUsers(Integer.parseInt(message.getMessage()));
-            property.firePropertyChange("connectedUpdate", 0, 1);
-        } else {
-            messages.add(message);
-            System.out.println(message);
-            property.firePropertyChange("message", 0, message);
-        }
+        messages.add(message);
+        System.out.println(message);
+        property.firePropertyChange("message", 0, message);
     }
 
     public void sendMessage(Message message) {
-        chatClient.sendMessage(message);
+        try {
+            remoteClient.sendMessage(message);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -128,5 +139,5 @@ public class ChatModel implements Model {
     public void removeListener(String eventID, PropertyChangeListener listener) {
         property.removePropertyChangeListener(eventID, listener);
     }
-    //TODO TEST
+
 }

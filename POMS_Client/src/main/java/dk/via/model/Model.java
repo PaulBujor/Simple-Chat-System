@@ -11,8 +11,6 @@ public interface Model extends PropertyChangeSubject {
 
     public void setHost(String host);
 
-    public void setPort(int port);
-
     public void setUsername(String username);
 
     public String getUsername();
@@ -23,10 +21,11 @@ public interface Model extends PropertyChangeSubject {
 
     public String getIP();
 
-    public boolean connect(String host, int port, String username) throws IOException;
+    public boolean connect(String host, String username) throws IOException;
 
     public void sendMessage(Message message);
 
-    void setConnectedUsers(int users);
+    public void setConnectedUsers(int users);
+
     public ArrayList<Message> getMessages(int number);
 }

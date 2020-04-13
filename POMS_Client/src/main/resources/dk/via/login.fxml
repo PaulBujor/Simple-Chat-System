@@ -42,7 +42,7 @@
                   <Font name="System Bold" size="31.0" />
                </font>
             </Label>
-            <VBox layoutX="172.0" layoutY="244.0">
+            <VBox layoutX="172.0" layoutY="270.0">
                <children>
                   <Label text="IP Address">
                      <font>
@@ -52,17 +52,7 @@
                   <TextField id="IPAddressField" fx:id="IPAddressField" prefHeight="38.0" prefWidth="359.0" styleClass="text-field-lower-line" stylesheets="@css/style.css" />
                </children>
             </VBox>
-            <VBox layoutX="173.0" layoutY="340.0">
-               <children>
-                  <Label text="Port">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Label>
-                  <TextField id="portLoginField" fx:id="portLoginField" prefHeight="38.0" prefWidth="359.0" styleClass="text-field-lower-line" stylesheets="@css/style.css" />
-               </children>
-            </VBox>
-            <VBox layoutX="172.0" layoutY="433.0">
+            <VBox layoutX="171.0" layoutY="363.0">
                <children>
                   <Label text="Username">
                      <font>
@@ -72,7 +62,7 @@
                   <TextField id="userNameLoginField" fx:id="userNameLoginField" prefHeight="38.0" prefWidth="359.0" styleClass="text-field-lower-line" stylesheets="@css/style.css" />
                </children>
             </VBox>
-            <Button id="connectButton" layoutX="290.0" layoutY="546.0" mnemonicParsing="false" onAction="#connectButtonPressed" prefHeight="53.0" prefWidth="124.0" stylesheets="@css/style.css" text="Connect" textFill="WHITE">
+            <Button id="connectButton" layoutX="289.0" layoutY="486.0" mnemonicParsing="false" onAction="#connectButtonPressed" prefHeight="53.0" prefWidth="124.0" stylesheets="@css/style.css" text="Connect" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

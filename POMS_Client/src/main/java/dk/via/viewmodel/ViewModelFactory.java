@@ -1,6 +1,5 @@
 package dk.via.viewmodel;
 
-import dk.via.mediator.ServerModel;
 import dk.via.model.Model;
 
 public class ViewModelFactory {

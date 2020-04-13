@@ -12,7 +12,6 @@ import java.net.UnknownHostException;
 
 public class LoginViewModel {
     private StringProperty userName;
-    private IntegerProperty port;
     private StringProperty host;
     private StringProperty error;
 
@@ -23,7 +22,6 @@ public class LoginViewModel {
     public LoginViewModel(Model model) {
         this.model = model;
         userName = new SimpleStringProperty();
-        port = new SimpleIntegerProperty();
         host = new SimpleStringProperty();
         connected = new SimpleBooleanProperty(false);
         error = new SimpleStringProperty();
@@ -31,7 +29,7 @@ public class LoginViewModel {
 
     public void connect() throws IOException {
         try {
-            connectedProperty().setValue(model.connect(hostProperty().get(), port.get(), userNameProperty().get()));
+            connectedProperty().setValue(model.connect(hostProperty().get(), userNameProperty().get()));
         } catch (UnknownHostException e) {
             error.set("Could not find host");
         } catch (SocketException e) {
@@ -45,10 +43,6 @@ public class LoginViewModel {
 
     public StringProperty errorProperty() {
         return error;
-    }
-
-    public IntegerProperty portProperty() {
-        return port;
     }
 
 
