@@ -10,5 +10,5 @@ public interface RemoteClient extends Remote {
     public void sendMessage(Message message) throws RemoteException;
     public void updateConnectedUsers(int connectedUsers) throws RemoteException;
     public boolean connect(String IP) throws RemoteException;
-    public void disconnect(String IP) throws RemoteException;
+    public void disconnect() throws RemoteException;
 }

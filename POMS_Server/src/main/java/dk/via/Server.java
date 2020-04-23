@@ -18,9 +18,11 @@ public class Server implements RemoteServer {
     private ArrayList<RemoteClient> clients;
     private int connectedClients;
 
-    public Server() {
+    public Server() throws RemoteException {
         clients = new ArrayList<RemoteClient>();
         connectedClients = 0;
+        UnicastRemoteObject.exportObject(this, 0);
+        System.out.printf("Server IP: %s\n", getIP());
     }
 
     public static String getIP() {
@@ -37,12 +39,6 @@ public class Server implements RemoteServer {
         }
     }
 
-    public void start() throws RemoteException, MalformedURLException {
-        System.out.printf("Server IP: %s\n", getIP());
-        UnicastRemoteObject.exportObject(this, 0);
-        Naming.rebind("ChatServer", this); //permission error
-    }
-
     @Override
     public synchronized void sendMessage(Message message) throws RemoteException {
         for (RemoteClient client : clients) {
@@ -50,25 +46,26 @@ public class Server implements RemoteServer {
         }
     }
 
-    public void connect(String IP) throws RemoteException {
+    public void connect(RemoteClient client) throws RemoteException {
         try {
-            RemoteClient remoteClient = (RemoteClient) Naming.lookup("rmi://" + IP + ":1099/ChatClient");
-            System.out.println(IP + " connected");
-            clients.add(remoteClient);
+            System.out.println(client + " connected");
+            clients.add(client);
             connectedClients++;
-            for (RemoteClient client : clients) {
-                client.updateConnectedUsers(connectedClients);
+            for (RemoteClient connectedClient : clients) {
+                connectedClient.updateConnectedUsers(connectedClients);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void disconnect(String IP) throws RemoteException {
+    public void disconnect(RemoteClient client) throws RemoteException {
+        System.out.println(client + " disconnected");
+        clients.remove(client);
         connectedClients--;
         try {
-            for (RemoteClient client : clients) {
-                client.updateConnectedUsers(connectedClients);
+            for (RemoteClient connectedClient : clients) {
+                connectedClient.updateConnectedUsers(connectedClients);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -7,6 +7,6 @@ import java.rmi.RemoteException;
 
 public interface RemoteServer extends Remote {
     public void sendMessage(Message message) throws RemoteException;
-    public void connect(String IP) throws RemoteException;
-    public void disconnect(String IP) throws RemoteException;
+    public void connect(RemoteClient client) throws RemoteException;
+    public void disconnect(RemoteClient client) throws RemoteException;
 }

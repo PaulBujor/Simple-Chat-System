@@ -25,7 +25,7 @@ public class Client implements RemoteClient {
     public boolean connect(String IP) throws RemoteException{
         try {
             server = (RemoteServer) Naming.lookup("rmi://" + IP + ":1099/ChatServer");
-            server.connect(IP);
+            server.connect(this);
             return true;
         } catch (Exception e) {
             System.out.println("Could not find server");
@@ -46,16 +46,10 @@ public class Client implements RemoteClient {
 
     @Override
     public void updateConnectedUsers(int connectedUsers) throws RemoteException{
-        System.out.println(connectedUsers);
         model.setConnectedUsers(connectedUsers);
     }
 
-    public void disconnect(String IP) throws RemoteException {
-        try {
-            Naming.unbind("ChatClient");
-        } catch (MalformedURLException | NotBoundException e) {
-            e.printStackTrace();
-        }
-        server.disconnect(IP);
+    public void disconnect() throws RemoteException {
+        server.disconnect(this);
     }
 }

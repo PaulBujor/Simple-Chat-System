@@ -84,12 +84,12 @@ public class ChatModel implements Model {
 
     public boolean connect(String host, String username) throws IOException {
         setHost(host);
-        setIP(host);
+        setIP(getMyIP());
         setUsername(username);
         remoteClient = new Client(this);
         remoteClient.start();
         //uses localhost when connecting to local server, and global ip when connecting to external server, will probably shit it's pants in some sitations
-        if (remoteClient.connect(host.equals("localhost") || host.equals("127.0.0.1") ? "localhost" : getMyIP())) {
+        if (remoteClient.connect(host)) {
             property.firePropertyChange("loadData", 0, 1);
             return true;
         }
@@ -99,7 +99,7 @@ public class ChatModel implements Model {
 
     public void disconnect() {
         try {
-            remoteClient.disconnect(getIP());
+            remoteClient.disconnect();
         } catch (RemoteException e) {
             e.printStackTrace();
         }

@@ -73,5 +73,6 @@ public class App extends Application {
             //this happens if user quits when in login view
         }
         super.stop();
+        System.exit(0);
     }
 }
